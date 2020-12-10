@@ -19,9 +19,9 @@
 	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
 
-		<div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
-			<input type=text id="cloud_name" value="motor_speed">
-			<input type=text id="cloud_value" value="0">
+		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
+			<input type=text id="cloud_name" value="action">
+			<input type=text id="cloud_value" value="throw">
 			<input type=text id="cloud_action_val" value="0">
 			<textarea id="cloud_code">
 				# MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
@@ -42,7 +42,26 @@
 
 </textarea>
 		</div>
+		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
+			<input type=text id="cloud_name" value="action">
+			<input type=text id="cloud_value" value="throw">
+			<input type=text id="cloud_action_val" value="0">
+			<textarea id="cloud_code">
+				# MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+				from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+				from spike.control import wait_for_seconds, wait_until, Timer
 
+				hub = PrimeHub()
+
+				throw = Motor('A')
+				turn = Motor('C')
+				load = Motor('E')
+				load.run_to_position(290, 'counterclockwise', 20)
+				yield(1000)
+				load.run_to_position(260, 'clockwise', 20)
+
+		</textarea>
+		</div>
 	</div>
 
 	<h2>My Project Quick Links:</h2>
