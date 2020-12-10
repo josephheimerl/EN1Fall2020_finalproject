@@ -24,21 +24,21 @@
 			<input type=text id="cloud_value" value="throw">
 			<input type=text id="cloud_action_val" value="0">
 			<textarea id="cloud_code">
-				# MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-				from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
-				from spike.control import wait_for_seconds, wait_until, Timer
+# MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+from spike.control import wait_for_seconds, wait_until, Timer
 
-				hub = PrimeHub()
+hub = PrimeHub()
 
-				throw = Motor('A')
-				turn = Motor('C')
-				load = Motor('E')
-				turn.run_to_position(CLOUD[turn_position], 'shortest path', 5)
-				throw.run_to_position(70, 'clockwise', 5)
-				yield(1000)
-				throw.run_to_position(350, 'counterclockwise', CLOUD[motor_speed])
-				throw.run_to_position(10, 'clockwise', 10)
-				turn.run_to_position(90, 'shortest path', 5)
+throw = Motor('A')
+turn = Motor('C')
+load = Motor('E')
+turn.run_to_position(CLOUD[turn_position], 'shortest path', 5)
+throw.run_to_position(70, 'clockwise', 5)
+yield(1000)
+throw.run_to_position(350, 'counterclockwise', CLOUD[motor_speed])
+throw.run_to_position(10, 'clockwise', 10)
+turn.run_to_position(90, 'shortest path', 5)
 
 </textarea>
 		</div>
@@ -47,18 +47,18 @@
 			<input type=text id="cloud_value" value="load">
 			<input type=text id="cloud_action_val" value="0">
 			<textarea id="cloud_code">
-				# MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-				from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
-				from spike.control import wait_for_seconds, wait_until, Timer
+# MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+from spike.control import wait_for_seconds, wait_until, Timer
 
-				hub = PrimeHub()
+hub = PrimeHub()
 
-				throw = Motor('A')
-				turn = Motor('C')
-				load = Motor('E')
-				load.run_to_position(290, 'counterclockwise', 20)
-				yield(1000)
-				load.run_to_position(260, 'clockwise', 20)
+throw = Motor('A')
+turn = Motor('C')
+load = Motor('E')
+load.run_to_position(290, 'counterclockwise', 20)
+yield(1000)
+load.run_to_position(260, 'clockwise', 20)
 
 		</textarea>
 		</div>
