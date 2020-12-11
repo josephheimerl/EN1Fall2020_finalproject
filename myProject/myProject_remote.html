@@ -6,14 +6,17 @@
 	  <script src="../src/cloud.js" charset="utf-8"></script>
 	  <link rel="stylesheet" href="../src/style.css" />
 	</head>
-<body>
+<body style="background-color:lightgreen">
 
 	<!-- SERVICE DOCK -->
 	<div id="servicedock">
 		<service-airtable id="service_airtable" tablename="finalProject"></service-airtable>
 	</div>
 
-  <h1>My Project (Remote Interface)</h1>
+  <h1>Ball Throwing</h1>
+	<h5>
+		Use the Controls below to try and get the balls into all of the cups
+	</h5>
 	
 	<h3>Power</h3>
 	<input type=range cloud_action='update' cloud_name='motor_speed' cloud_min="0" cloud_max="100" min='0' max='100' value='0' />
